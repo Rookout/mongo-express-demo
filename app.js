@@ -2,6 +2,11 @@
 
 'use strict';
 
+if (process.env.ROOKOUT_TOKEN) {
+  console.log('Initializing Rookout');
+  const rook = require('rookout'); // eslint-disable-line
+  rook.start();
+}
 const clc             = require('cli-color');
 const csrf            = require('csurf');
 const commander       = require('commander');
